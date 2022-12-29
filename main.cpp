@@ -39,8 +39,8 @@ int main() {
     for (int i = 0; i < 9; i++) {
         std::cout << "Player " << mark << ", choose cell: \n";
         std::cin >> pos;
-        while (board[pos-1] == 'X' || board[pos-1] == 'O') {
-            std::cout << "Cell is occupied. Please choose another cell: \n";
+        while (board[pos-1] == 'X' || board[pos-1] == 'O' || pos < 1 || pos > 9) {
+            std::cout << "Cell is invalid. Please choose another cell: \n";
             std::cin >> pos;
         }
         fill(board, pos, mark);
