@@ -43,6 +43,7 @@ int main() {
             std::cout << "Cell is invalid. Please choose another cell: \n";
             std::cin >> pos;
         }
+        
         fill(board, pos, mark);
         if (isDone(board)) {
             printBoard(board);
